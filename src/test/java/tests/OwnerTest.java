@@ -20,7 +20,7 @@ public class OwnerTest {
     @Test
     public void testGithub() {
         String title = driver.getTitle();
-        assertEquals("GitHub: Where the world builds software · GitHub", title);
+        assertEquals("Википедия — свободная энциклопедия", title);
     }
 
     @AfterEach

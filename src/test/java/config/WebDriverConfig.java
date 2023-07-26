@@ -7,7 +7,7 @@ import java.net.URL;
 public interface WebDriverConfig extends Config {
 
     @Key("baseUrl")
-    @DefaultValue("https://github.com")
+    @DefaultValue("https://ru.wikipedia.org/wiki/")
     String getBaseUrl();
 
     @Key("browser")
