@@ -18,7 +18,7 @@ public class TestBase {
         Configuration.baseUrl = ownerConfig.getBaseUrl();
         Configuration.browser = ownerConfig.getBrowser();
         Configuration.browserVersion = ownerConfig.getBrowserVersion();
-        Configuration.remote = ownerConfig.getRemoteUrl();
+//        Configuration.remote = ownerConfig.getRemoteUrl();
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(

@@ -92,25 +92,3 @@ tasks.withType(Test) {//благодаря этой строчке переда�
 }
 
 
-test {
-    systemProperty "chromeoptions.prefs", "init.accept_languages=ru"
-    useJUnitPlatform()
-}
-
-task steamMobile(type: Test) {
-    useJUnitPlatform {
-        includeTags "steamMobile"
-    }
-}
-
-task steamUI(type: Test) {
-    useJUnitPlatform {
-        includeTags ("steamUI")
-    }
-}
-
-task steamApi(type: Test){
-    useJUnitPlatform{
-        includeTags("steamApi")
-    }
-}
