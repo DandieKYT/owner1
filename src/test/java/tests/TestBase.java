@@ -9,16 +9,17 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.util.Map;
 
 public class TestBase {
+    static OwnerConfig ownerConfig = ConfigFactory.create(OwnerConfig.class, System.getProperties());
+
     @BeforeAll
     static void beforeAll() {
 
-        OwnerConfig ownerConfig = ConfigFactory.create(OwnerConfig.class, System.getProperties());
 
         Configuration.browserSize = ownerConfig.getBrowserSize();
         Configuration.baseUrl = ownerConfig.getBaseUrl();
         Configuration.browser = ownerConfig.getBrowser();
         Configuration.browserVersion = ownerConfig.getBrowserVersion();
-//        Configuration.remote = ownerConfig.getRemoteUrl();
+        Configuration.remote = ownerConfig.getRemoteUrl();
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(

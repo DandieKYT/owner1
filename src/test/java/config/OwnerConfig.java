@@ -1,7 +1,9 @@
 package config;
 
 import org.aeonbits.owner.Config;
-
+@Config.Sources({
+        "classpath:owner.properties"
+})
 public interface OwnerConfig extends Config {
 
     @Key("baseUrl")
@@ -17,7 +19,7 @@ public interface OwnerConfig extends Config {
     String getBrowserSize();
 
     @Key("remoteUrl")
-    @DefaultValue("https://user1:1234@selenoid.autotests.cloud/wd/hub")
+    @DefaultValue("http://localhost:4444")
     String getRemoteUrl();
 
     @Key("browserVersion")
